@@ -1,2 +1,4 @@
-# AIProperty
-Testing a new template prototype for SmartLet
+# Insurance Ai
+Repo for static prototype insurance Ai
+
+Team: Anaïs Gilbert and Sandhia
