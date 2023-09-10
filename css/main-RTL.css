@@ -1,11 +1,5 @@
 @charset "UTF-8";
-/*** RTL websites ***/ /*===================================================
-Project: flex-it - IT Solutions & Business Services Responsive HTML5 Bootstrap5  landing-page Template 
-Auther: aminThemes
-Version: 1.0
-Last change: 30 November 2022
-Template Description: IT Solutions & Business Services Responsive HTML5 Bootstrap5  landing-page Template 
-====================================================*/
+
 /*==
 - global-rules and helper classes
 - page-header
@@ -3358,7 +3352,7 @@ body.rounded-btns .read-more {
 }
 .contact-us .contact-info-panel .info-panel .line-on-side {
   margin-bottom: 2rem;
-  width: 4rem;
+  width: 30rem;
   height: 2px;
 }
 .contact-us .contact-info-panel .info-panel .location-address {
@@ -3370,6 +3364,7 @@ body.rounded-btns .read-more {
 .contact-us .contact-info-panel .info-panel .location-card {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 .contact-us .contact-info-panel .info-panel .location-card:last-child {

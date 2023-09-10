@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>SmartLet Property Management Ai</title>
-		<meta name="description" content="Discover the future of property management with our AI-driven solutions. Streamline operations, enhance customer service, and revolutionize sales strategies. Elevate your property experience today!" />
+		<title>Insurance AI Assistant</title>
+		<meta name="description" content="Discover the future of Insurance with our AI-driven solutions. Simplify your insurances, reduce costs, and achieve peace of mind. Elevate your insurance experience today!" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<!-- fav icon -->
 		<link rel="icon" href="assets/images/fav-icon/fav-icon.png">
@@ -41,6 +41,9 @@
 		
 		<!-- main-LTR -->
 		<link rel="stylesheet" href="css/main-LTR.css">
+		
+	<!-- chatbot stylesheet -->
+	<link rel="stylesheet" href="css/home.css">
 
 		<!-- Clarity Analytics Tracker -->
 
@@ -59,14 +62,14 @@
 			<div class="container">
 				<!--Start navbar-->
 				<nav class="menu-navbar" id="main-nav">
-					<div class="header-logo"><a class="logo-link" href="#"><img class="logo-img light-logo" loading="lazy" src="assets/images/logo/logo-light.png" alt="logo"/><img class="logo-img  dark-logo" loading="lazy" src="assets/images/logo/logo-dark.png" alt="logo"/></a></div>
+					<div class="header-logo"><a class="logo-link" href="#"><img class="logo-img light-logo" loading="lazy" src="assets/images/logo/logo-colored-test.png" alt="logo"/><img class="logo-img  dark-logo" loading="lazy" src="assets/images/logo/logo-colored-test.png" alt="logo"/></a></div>
 					<div class="links menu-wrapper ">
 						<ul class="list-js links-list">
 							<li class="nav-item menu-item has-sub-menu"><a class="nav-link menu-link   active" href="#page-hero">home</a></li>
 							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#services">services </a></li>
 							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#about">about </a></li>
 							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#pricing">pricing </a></li>
-							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#testimonials">testimonials </a></li>
+							<!-- <li class="nav-item menu-item"><a class="nav-link menu-link  " href="#testimonials">testimonials </a></li> -->
 							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#faq">FAQ </a></li>
 							<li class="nav-item menu-item"><a class="nav-link menu-link  " href="#contact-us">contact us </a></li>
 						</ul>
@@ -97,18 +100,15 @@
 						<div class="hero-text-area   ">
 							<div class="row">
 								<div class="col-12       ">
-									<div class="pre-title ">Welcome to SmartLet, your AI Property Manager </div>
-									<h1 class="hero-title  ">Where AI meets Real Estate <span class="featured-text">solutions <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"></path></svg>  </span><span class="design-element rounded-shape stripes"></span></h1>
+									<div class="hero-title ">Welcome to your AI <span class="featured-text">Insurance Assistant<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"></path></svg>  </span><span class="design-element rounded-shape stripes"></span></div>
 								</div>
 								<div class="col-10       ">
-									<p class="hero-subtitle ">
-										The Ultimate Synergy for Profitable Investments and Seamless Management. 
-										Elevate ROI: Discover How AI Transforms Property Management Strategies 
-									</p>
+									
 								</div>
 				<div class="col-12   ">
-					<div class="hero-social-icons mb-3 ">
+					<div class="hero-social-icons mt-3 mb-3 ">
 						<div class="sc-wrapper dir-row sc-flat">
+							<h4 class="mb-3">Tell your friends</h4>
 						<ul class="sc-list">
 							<li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
 							<li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li>
@@ -120,11 +120,6 @@
 					</div>
 								<div class="col-12   ">
 									<div class="cta-links-area "><a class=" btn-outline cta-link cta-link-primary " href="#0">start now</a>
-										<div class="play-btn-row-dir ">
-						<!-- <a class="video-link" href="#" role="button" title="play" data-fancybox="data-fancybox"> -->
-												<div class="play-video-btn">
-													<div class="play-btn"> <i class="fas fa-play icon"></i></div>
-												</div></a></div>
 									</div>
 								</div>
 							</div>
@@ -135,6 +130,29 @@
 						<div class="hero-image-area mb-5 mb-lg-0">
 							<div class="hero-img-wraper"><img class="img-fluid " src="assets/images/hero/tempModel.png" alt="" draggable="false"></div>
 						</div>
+						<div class="col-10 mt-3 ">
+							<h4 class="clr-main">
+								Ask me anything about Insurances
+							</h4>
+						</div>
+	
+					<div class="askContainer">
+							<div class="askflex-container">
+								<input
+									type="text"
+									id="question"
+									placeholder="Enter your question..."
+								/>
+								<button
+									id="ask"
+								>
+									Ask
+								</button>
+							</div>
+							<div id="loading-image"></div>
+							<div id="response"></div>
+						</div>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -151,7 +169,6 @@
 							Elevate Your Property Experience: Unleashing AI-Powered Excellence for Seamless Management and Growth
 						</p>
 					</div>
-					<div class=" cta-area wow fadeInUp" data-wow-delay=".6s"><a class="cta-btn btn-solid    ">see all services <i class="bi bi-arrow-right icon "></i></a></div>
 				</div>
 				<div class="row gx-4 gy-4 services-row ">  
 					<div class="col-12 col-md-6  col-lg-4 mx-auto ">
@@ -159,10 +176,9 @@
 						<div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".1s">
 							<div class="service-icon"><i class="flaticon-web-development font-icon"></i></div><span class="service-num hollow-text">1    </span>
 							<div class="service-content">
-								<h3 class="service-title">CRM Sync</h3>
+								<h3 class="service-title">Premium Monitoring</h3>
 								<p class="service-text">
-									Integration with existing customer relationship management (CRM) systems to streamline data management and improve overall efficiency.
-								</p>
+									Continuously monitor insurance premiums for clients, alerting them to potential rate increases and suggesting ways to mitigate costs.								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
 						<!-- End First service box   -->
@@ -172,9 +188,10 @@
 						<div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".2s">
 							<div class="service-icon"><i class="flaticon-nanotechnology font-icon"></i></div><span class="service-num hollow-text">2    </span>
 							<div class="service-content">
-								<h3 class="service-title">SMS and Email Follow-ups</h3>
+								<h3 class="service-title">Policy Optimization</h3>
 								<p class="service-text">
-									Automated follow-up messages sent via SMS and email to prospects, increasing engagement and conversion rates.
+									Use AI algorithms to analyze and optimize existing insurance policies to ensure they align with clients' needs and goals.
+									Provide recommendations for adjustments, coverage improvements, and cost savings.
 								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
@@ -185,10 +202,9 @@
 						<div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".3s">
 							<div class="service-icon"><i class="flaticon-web-domain font-icon"></i></div><span class="service-num hollow-text">3    </span>
 							<div class="service-content">
-								<h3 class="service-title">Round-robin Showings</h3>
+								<h3 class="service-title">Insurance Renewal Alerts</h3>
 								<p class="service-text">
-									Equitable distribution of property showings among leasing team members, ensuring fair access to potential tenants.
-								</p>
+									Send automated renewal reminders to clients, helping them stay up-to-date on policy renewals and avoid coverage gaps.								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
 						<!-- End Third service box-->
@@ -198,9 +214,9 @@
 						<div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".4s">
 							<div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span class="service-num hollow-text">4    </span>
 							<div class="service-content">
-								<h3 class="service-title">Open House Scheduling:t</h3>
+								<h3 class="service-title">Risk Assessment and Mitigation</h3>
 								<p class="service-text">
-									Easy scheduling of open house events with automated reminders for both leasing teams and prospects.
+									Utilize AI to assess clients' risk factors and provide recommendations for mitigating potential risks.
 								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
@@ -211,9 +227,9 @@
 						<div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".5s">
 							<div class="service-icon"><i class="flaticon-search font-icon"></i></div><span class="service-num hollow-text">5    </span>
 							<div class="service-content">
-								<h3 class="service-title">Showing Confirmation:</h3>
+								<h3 class="service-title">Policy Documentation Management</h3>
 								<p class="service-text">
-									Instant confirmation of property showings to prospects, reducing no-shows and optimizing time management.
+									Create and maintain a secure digital repository for all insurance policies, making it easy for clients to access and manage their documents.
 								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
@@ -224,9 +240,9 @@
 						<div class="box service-box  wow fadeInUp  reveal-start" data-wow-offset="0" data-wow-delay=".6s">
 							<div class="service-icon"><i class="flaticon-strategy font-icon"></i></div><span class="service-num hollow-text">6    </span>
 							<div class="service-content">
-								<h3 class="service-title">Performance Reports:</h3>
+								<h3 class="service-title">Coverage Gap Analysis</h3>
 								<p class="service-text">
-									Comprehensive reports on team performance, marketing strategies, and customer service metrics for data-driven decision-making.
+									Identify and highlight coverage gaps in clients' insurance portfolios, ensuring they have comprehensive protection.
 								</p>
 							</div><a class="read-more" href="#0">read more<i class="bi bi-arrow-right icon "> </i></a>
 						</div>
@@ -245,67 +261,60 @@
 						<div class="col-12 col-lg-6 d-flex align-items-center order-1 order-lg-0 about-col pad-end  wow fadeInUp " data-wow-delay="0.6s">
 							<div class="text-area ">
 								<div class="sec-heading  light-title ">
-									<div class="content-area"><span class=" pre-title wow fadeInUp " data-wow-delay=".2s">about Us</span>
-										<h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>trusted</span> by worldwide clients  since<span class='featured-text'>  EVER. <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"></path></svg></span></h2>
+									<div class="content-area">
+										<span class=" pre-title wow fadeInUp " data-wow-delay=".2s">about Us</span>
 									</div>
 								</div>
 								<p class="about-text">
-								 
-									Welcome to SmartLet Property Management – where innovation meets property management.
-									Our cutting-edge AI-driven software streamlines operations, empowering your leasing team, minimizing vacancies,
-									 and boosting productivity. More 'me-time' for you is just the beginning.
-
-									Elevate your online presence with our AI-infused marketing strategies.
-									 By harnessing data insights, we'll craft impactful plans to attract and engage customers effectively.
-
-								</p>
-								<p class="about-text">
-								Experience top-tier customer service through AI chatbots, offering instant support and timely responses to common queries,
-									 saving you time and impressing your clients.
-
-									Revolutionize your sales process with AI. From automated listings to predictive pricing analytics, we're here to supercharge
-									 efficiency and elevate your sales strategies.
-
-									Transform your property management website into an industry trailblazer.
-									 Join us in setting new standards with AI-powered excellence. Let's exceed your expectations – start your journey today!
+									Insurance can be complex, and we understand the challenges you face when trying 
+									to navigate the intricate world of policies, premiums, and coverage. That's where we come in. 
+									We combine the latest advancements in artificial intelligence with a commitment to your financial well-being, resulting in a truly transformative insurance experience.
 								</p>
 								<div class="info-items-list ">
 									<div class="row ">
 										<div class="col-9 col-xl-6">
 											<div class="info-item"><i class="flaticon-medal  info-icon"></i>
 												<div class="info-content">
-													<h5 class="info-title">Efficiency </h5>
-													<p class="info-text">Streamline leasing operations, reduce vacancies, and enhance productivity.</p>
+													<h5 class="info-title">Personalization</h5>
+													<p class="info-text">No two individuals are the same, and neither are their insurance needs. 
+														We use AI algorithms to tailor our services to your unique situation, ensuring you get the coverage that matters most to you.</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-9 col-xl-6">
 											<div class="info-item"><i class="flaticon-game-console info-icon"></i>
 												<div class="info-content">
-													<h5 class="info-title">Effective Marketing: </h5>
-													<p class="info-text">Elevate your online presence with AI-driven strategies that attract and engage customers.</p>
+													<h5 class="info-title">Transparency</h5>
+													<p class="info-text">
+														We believe in clear, honest communication. Our recommendations and insights are straightforward, helping you understand your policies better and ultimately save money.
+													</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-9 col-xl-6">
 											<div class="info-item"><i class="flaticon-map info-icon"></i>
 												<div class="info-content">
-													<h5 class="info-title">Instant Support: </h5>
-													<p class="info-text">Experience top-tier customer service with AI chatbots, saving time and impressing clients.</p>
+													<h5 class="info-title">Data Security</h5>
+													<p class="info-text">
+														Your privacy is paramount to us. We employ state-of-the-art security measures to protect your personal and insurance information, giving you peace of mind.
+													</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-9 col-xl-6">
 											<div class="info-item"><i class="flaticon-technical-support-1  info-icon"></i>
 												<div class="info-content">
-													<h5 class="info-title">Revolutionized Sales:</h5>
-													<p class="info-text">Automated listings and predictive pricing analytics supercharge sales efficiency.</p>
+													<h5 class="info-title">Savings</h5>
+													<p class="info-text">
+														Our AI technology is designed to uncover hidden savings opportunities within your insurance portfolio. 
+														We're committed to helping you keep more money in your pocket while maintaining the coverage you require.
+													</p>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="cta-area"><a class=" btn-solid reveal-start" href="#0">Get in touch</a>
+								<div class="cta-area"><a class=" btn-solid reveal-start" href="#0">Demo Video</a>
 									<!-- <div class="signature ">
 										<div class="signature-img"></div>
 										<div class="signature-name">CEO &amp; Founder </div>
@@ -315,14 +324,14 @@
 						</div>
 						<div class="col-12 col-lg-6 d-flex align-items-center order-0 order-lg-1 about-col  wow fadeInUp" data-wow-delay="0.2s">
 							<div class="img-area  " data-tilt>
-								<div class="image   "><img class="about-img img-fluid " loading="lazy" src="assets/images/about/3.png" alt="Our vision"></div>
+								<div class="image"><img class="about-img img-fluid " loading="lazy" src="assets/images/about/3.png" alt="Our vision"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!--End first about div-->
 				<!-- Start first about div-->
-				<div class="content-block  ">
+				<div class="content-block" id="why">
 					<div class="row">
 						<div class="col-12 col-lg-6 d-flex align-items-center about-col  wow fadeInUp" data-wow-delay="0.2s">
 							<div class="img-area  ">
@@ -334,24 +343,20 @@
 								<div class="sec-heading  light-title ">
 									<div class="content-area">
 										<h2 class=" title    wow fadeInUp" data-wow-delay=".4s">
-											Why our <span class='hollow-text'> customers</span>  choose <span class='featured-text'>working 
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none">
-													<path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"></path></svg>
-												</span> with us
+											Use Our <span class='featured-text'>AI Expert</span> to Help Your Insurances 
+												</span>
 											</h2>
 									</div>
 								</div>
-								<p class=" about-text">
-									Unlocking Success: Elevate Property Management with AI-Powered Excellence
-								</p>
 								<div class="info-items-list">
 									<div class="row ">
 										<div class="col-12 ">
 											<div class="info-item"><span class="info-number ">01.</span>
 												<div class="info-content">
-													<h5 class="info-title">Transformative edge in the property management landscapes </h5>
+													<h5 class="info-title">Advanced AI Technology</h5>
 													<p class="info-text">
-														Powered by AI innovation, our software revolutionizes leasing, slashing vacancies, and boosting productivity.
+														AI technology goes beyond traditional insurance management. 
+														It analyzes your policies, identifies opportunities for optimization, and provides tailored recommendations to save you money while maintaining robust coverage.
 													</p>
 												</div>
 											</div>
@@ -359,10 +364,10 @@
 										<div class="col-12 ">
 											<div class="info-item"><span class="info-number ">02.</span>
 												<div class="info-content">
-													<h5 class="info-title">Data-driven marketing strategies</h5>
+													<h5 class="info-title">Personalized Solutions</h5>
 													<p class="info-text">
-														With our data-driven marketing strategies, clients witness a remarkable surge in their online presence,
-														engaging customers like never before.
+														Your insurance needs are unique. That's why we personalize our services to match your individual circumstances, 
+														ensuring your coverage aligns perfectly with your life.
 													</p>
 												</div>
 											</div>
@@ -370,22 +375,28 @@
 										<div class="col-12 ">
 											<div class="info-item"><span class="info-number ">03.</span>
 												<div class="info-content">
-													<h5 class="info-title">Instant Support</h5>
-													<p class="info-text">Our AI chatbots provide instant support, saving valuable time and elevating customer satisfaction.</p>
+													<h5 class="info-title">Transparent Insights</h5>
+													<p class="info-text">
+														Insurance doesn't have to be a mystery. We believe in complete transparency. 
+														Our AI-driven insights are clear and concise, helping you understand your policies, premiums, and options like never before.
+													</p>
 												</div>
 											</div>
 										</div>
 										<div class="col-12 ">
 											<div class="info-item"><span class="info-number ">04.</span>
 												<div class="info-content">
-												<h5 class="info-title">Sales Efficiency Redefined</h5>
-												<p class="info-text">Through automated listings and predictive pricing analytics, we redefine sales efficiency.</p>
+												<h5 class="info-title">Cost Savings</h5>
+												<p class="info-text">
+													Our AI technology is designed to uncover hidden savings opportunities within your existing insurance portfolio. 
+													Clients who partner with us often see significant reductions in their insurance costs without compromising on protection.
+												</p>
 												</div>
 											</div>
 											</div>
 									</div>
 								</div>
-								<div class="cta-area "><a class=" btn-solid " href="#0">get in touch</a></div>
+								<div class="cta-area "><a class=" btn-solid " href="#0">Join Us</a></div>
 							</div>
 						</div>
 					</div>
@@ -394,196 +405,78 @@
 			</div>
 		</section>
 		<!-- End  about Section-->
-		<!-- Start  stats Section-->
-		<section class="stats js-stats-counter mega-section">
-			<div class="overlay-photo-image-bg" data-bg-img="assets/images/sections-bg-images/pattern-bg-3.jpg" data-bg-opacity=".2"></div>
-			<div class="container">
-				<div class="stats-inner">
-					<div class="row ">
-						<!--Info One-->
-						<div class="col-12 col-md-6 col-lg-3 stat-box ">
-							<div class="stat-box-inner  " data-tilt="data-tilt"><i class="flaticon-project-management stat-icon"></i>
-								<p class="stat-num "><span class="counter" data-from="10" data-to="750" data-speed="3000" data-refresh-interval="50"></span><span class="sign">+</span></p><span class="stat-desc">finished projects</span>
-							</div>
-						</div>
-						<!--Info Two-->
-						<div class="col-12 col-md-6 col-lg-3 stat-box ">
-							<div class="stat-box-inner  " data-tilt="data-tilt"><i class="flaticon-content-management stat-icon"></i>
-								<p class="stat-num "><span class="counter" data-from="0" data-to="23" data-speed="3000" data-refresh-interval="50"></span><span class="sign">+</span></p><span class="stat-desc">Created jobs</span>
-							</div>
-						</div>
-						<!--Info Three-->
-						<div class="col-12 col-md-6 col-lg-3 stat-box ">
-							<div class="stat-box-inner  " data-tilt="data-tilt"><i class="flaticon-user stat-icon"></i>
-								<p class="stat-num "><span class="counter" data-from="0" data-to="200" data-speed="3000" data-refresh-interval="50"></span><span class="sign">+</span></p><span class="stat-desc">happy customers</span>
-							</div>
-						</div>
-						<!--Info Four-->
-						<div class="col-12 col-md-6 col-lg-3 stat-box ">
-							<div class="stat-box-inner  " data-tilt="data-tilt"><i class="flaticon-aim stat-icon"></i>
-								<p class="stat-num "><span class="counter" data-from="0" data-to="28" data-speed="3000" data-refresh-interval="50"></span><span class="sign">+</span></p><span class="stat-desc">years Of exprience</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End  stats Section-->
- 
-		<!-- Start  our-clients Section-->
-		<section class="our-clients  mega-section   wow fadeInUp" id="our-clients" data-wow-delay="0.2s">
-			<div class="container">
-				<div class="sec-heading   centered ">
-					<div class="content-area">
-						<h2 class=" title    wow fadeInUp" data-wow-delay=".4s">trusted by over 500 clients around the world</h2>
-					</div>
-				</div>
-				<div class=" clients-logos d-flex align-items-center justify-content-around flex-wrap">
-					<!--Swiper-->
-					<div class="swiper-container">
-						<div class="swiper-wrapper clients-logo-wrapper wow fadeIn " data-wow-delay=".02s">
-							<!-- every client logo is located inside div  with clss name "swiper-slide ".
-							if you want to add more logos please keep the strcture of the swiper-slide as showen below
-							-->
-							<div class="swiper-slide">
-								<div class="client-logo  "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/mosler.jpg" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/bard.jpg" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/lego.jpg" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/info.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/5-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/6-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/7-white.png" alt=" "></a></div>
-							</div>
-							<!-- <div class="swiper-slide">
-								<div class="client-logo  "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/1-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/2-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/3-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/4-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/5-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/6-white.png" alt=" "></a></div>
-							</div>
-							<div class="swiper-slide">
-								<div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="assets/images/clients-logos/7-white.png" alt=" "></a></div>
-							</div> -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End  our-clients Section-->
+
 		<!-- Start  pricing Section-->
 		<section class="pricing mega-section  " id="pricing">
 			<div class="container">
 				<div class="sec-heading  ">
 					<div class="content-area">
 						<h2 class=" title    wow fadeInUp" data-wow-delay=".2s"><span class='hollow-text'>affordable</span> pricing plans</h2>
-						<p class="subtitle   wow fadeInUp " data-wow-delay=".4s">The best deals in the market:</p>
 					</div>
-					<div class=" cta-area   wow fadeInUp" data-wow-delay=".6s"><a class="cta-btn btn-solid    " href="#0">see all plans<i class="bi bi-arrow-right icon "></i></a></div>
 				</div>
 				<div class="row">
 					<!--First Plan-->
 					<div class="col-12  col-md-6 col-xl-3  mx-auto price-plan ">
 						<div class="plan    wow fadeInUp  " data-wow-delay=".1s ">
 							<div class="plan-head"><i class="flaticon-nft-1 plan-icon"></i>
-								<h4 class="plane-name">Basic plan</h4>
+								<h4 class="plane-name">Open Plan</h4>
 								<div class="plan-price">
-									<h3 class="price">30<sup class="currency-symbol">$</sup></h3><span class="per">Monthly</span>
+									<h3 class="price">Always Free</h3>
 								</div>
 							</div>
 
 							<div class="plan-details">
 								<ul class="plan-list">
-									<li class="plan-feat "> <span class="feat-text">Unlimited Users. </span></li>
-									<li class="plan-feat "> <span class="feat-text">Email integration (Microsoft and Gmail). </span></li>
-									<li class="plan-feat "> <span class="feat-text">Post-showing feedback from renters.</span></li>
-									<li class="plan-feat "> <span class="feat-text">PM Software Integration.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Follow-up email and SMS.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Public website with chatbot.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Two-way calendar sync..</span></li>
+									<li class="plan-feat "> <span class="feat-text">Ask Me Anything About Your Insurances</span></li>
+									<li class="plan-feat "> <span class="feat-text">Note: Restrictions Apply From Time To Time.</span></li>
 								</ul>
 							</div>
-							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">select plan  </a></div>
+							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More</a></div>
 						</div>
 					</div>
 					<!--Second-plan-->
 					<div class="col-12  col-md-6 col-xl-3  mx-auto price-plan ">
 						<div class="plan    wow fadeInUp  " data-wow-delay=".3s ">
 							<div class="plan-head"><i class="flaticon-virtual-reality plan-icon"></i>
-								<h4 class="plane-name">standerd plan</h4>
+								<h4 class="plane-name">Tailored Plan</h4>
 								<div class="plan-price">
-									<h3 class="price">60<sup class="currency-symbol">$</sup></h3><span class="per">Monthly</span>
+									<h3 class="price">25<sup class="currency-symbol">$</sup></h3><span class="per">Monthly</span>
 								</div>
 							</div>
 
 							<div class="plan-details">
 								<ul class="plan-list">
-									<li class="plan-feat "> <span class="feat-text">Everything included in Basic, plus: </span></li>
-									<li class="plan-feat "> <span class="feat-text">Notify current tenant of showings.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Schedule owner reports.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Send custom rental application link. </span></li>
-									<li class="plan-feat "> <span class="feat-text">Custom pre-qualification questions.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Marketing message.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Add River chatbot to your website (beta).</span></li>
+									<li class="plan-feat "> <span class="feat-text">Tailor Your AI Helper To Your Preferences.</span></li>
+									<li class="plan-feat "> <span class="feat-text">Note: Charities/Other Worthy Organisations Can Access At A Lower Price.</span></li>
 								</ul>
 							</div>
-							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">select plan  </a></div>
+							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More </a></div>
 						</div>
 					</div>
 					<!--Third-plan-->
 					<div class="col-12  col-md-6 col-xl-3  mx-auto price-plan ">
 						<div class="plan   featured  wow fadeInUp  " data-wow-delay=".5s ">
 							<div class="plan-head"><i class="flaticon-box plan-icon"></i>
-								<h4 class="plane-name">pro plan</h4>
+								<h4 class="plane-name">Customized Plan</h4>
 								<div class="plan-price">
-									<h3 class="price">100<sup class="currency-symbol">$</sup></h3><span class="per">Monthly</span>
+									<h3 class="price">Get Quote</h3>
 								</div>
 							</div>
 
 							<div class="plan-details">
 								<ul class="plan-list">
-									<li class="plan-feat "> <span class="feat-text">Everything in Basic & Standard.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Open house scheduling.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Auto-assign agents to showings (beta).</span></li>
-									<li class="plan-feat "> <span class="feat-text">Zapier integration.</span></li>
-									<li class="plan-feat "> <span class="feat-text">ROI reports.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Bulk email prospects./span></li>
-									<li class="plan-feat "> <span class="feat-text">Capture leads from contact forms.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Connect multiple calendars.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Dedicated account management.</span></li>
-									<li class="plan-feat "> <span class="feat-text">Feature request access. Early access to beta features & so much more.</span></li>
+									<li class="plan-feat "> <span class="feat-text">Tell Us What You Need & We Will Customise.</span></li>
+									<li class="plan-feat "> <span class="feat-text">A customized solution just for you.</span></li>
 								</ul>
 							</div>
-							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">select plan  </a></div>
+							<div class="plan-cta"><a class="cta-btn btn-outline " href="#0">Find Out More</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End  pricing Section-->
-		<!-- Start  testimonials Section-->
+		<!-- Start  testimonials Section
 		<section class="testimonials testimonials-1-col   has-dark-bg  mega-section " id="testimonials">
 			<div class="overlay-photo-image-bg parallax " data-bg-img="assets/images/sections-bg-images/1.jpg" data-bg-opacity=".25"> </div>
 			<div class="container">
@@ -595,8 +488,8 @@
 				<div class="row d-flex align-items-center">
 					<div class="col-12 col-md-10  mx-auto">
 						<div class="swiper-container  wow fadeInUp  " data-wow-delay="0.2s">
-							<div class="swiper-wrapper">
-								<!--First Slide-->
+							<div class="swiper-wrapper">-->
+								<!--First Slide
 								<div class="swiper-slide">
 									<div class="testmonial-card d-flex align-items-center justify-content-center">
 										<div class="testimonial-content">
@@ -616,8 +509,8 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!--Second Slide-->
+								</div>-->
+								<!--Second Slide
 								<div class="swiper-slide">
 									<div class="testmonial-card d-flex align-items-center justify-content-center">
 										<div class="testimonial-content">
@@ -637,8 +530,8 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<!--third Slide-->
+								</div>-->
+								<!--third Slide
 								<div class="swiper-slide">
 									<div class="testmonial-card d-flex align-items-center justify-content-center">
 										<div class="testimonial-content">
@@ -659,8 +552,8 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--navigation buttons-->
+							</div>-->
+							<!--navigation buttons
 							<div class="swiper-button-prev">
 								<div class="left-arrow"><i class="bi bi-chevron-left icon "></i>
 								</div>
@@ -673,7 +566,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>-->
 		<!-- End  testimonials Section-->
 		<!-- Start  faq Section-->
 		<section class="faq mega-section   " id="faq">
@@ -698,12 +591,12 @@
 								<div class="card-header " id="heading-1">
 									<h5 class="mb-0 faq-title">
 										<button class="btn btn-link  faq-btn  collapsed" data-bs-toggle="collapse" 
-											data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">are your service easy to use?</button>
+											data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">What does your company do?</button>
 									</h5>
 								</div>
 								<div class="collapse " id="collapse-1" aria-labelledby="collapse-1" data-bs-parent="#accordion">
 									<div class="card-body">
-										<p class="faq-answer">FAQ COMING SOON</p>
+										<p class="faq-answer">We leverage AI technology to assist individuals in optimizing and managing their existing insurance policies effectively.</p>
 									</div>
 								</div>
 							</div>
@@ -711,12 +604,12 @@
 								<div class="card-header " id="heading-2">
 									<h5 class="mb-0 faq-title">
 										<button class="btn btn-link  faq-btn  collapsed " 
-											data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">will i receive future updates?</button>
+											data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">How can your AI technology help me with my insurance policies?</button>
 									</h5>
 								</div>
 								<div class="collapse " id="collapse-2" aria-labelledby="collapse-2" data-bs-parent="#accordion">
 									<div class="card-body">
-										<p class="faq-answer">FAQ COMING SOON</p>
+										<p class="faq-answer">Our AI algorithms analyze your insurance policies, identify potential cost-saving opportunities, coverage gaps, and provide personalized recommendations to enhance your coverage.</p>
 									</div>
 								</div>
 							</div>
@@ -724,12 +617,14 @@
 								<div class="card-header " id="heading-3">
 									<h5 class="mb-0 faq-title">
 										<button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" 
-											data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">is this services work in my country?</button>
+											data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">Is my personal and insurance information safe with your company?</button>
 									</h5>
 								</div>
 								<div class="collapse " id="collapse-3" aria-labelledby="collapse-3" data-bs-parent="#accordion">
 									<div class="card-body">
-										<p class="faq-answer">FAQ COMING SOON </p>
+										<p class="faq-answer">
+											Absolutely. We prioritize data security and use industry-standard encryption and protection measures to keep your information secure.
+										</p>
 									</div>
 								</div>
 							</div>
@@ -737,12 +632,28 @@
 								<div class="card-header " id="heading-4">
 									<h5 class="mb-0 faq-title">
 										<button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" 
-											data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">How much I will pay?</button>
+											data-bs-target="#collapse-4" aria-expanded="true" aria-controls="collapse-4">Do I need to share sensitive information to use your service?</button>
 									</h5>
 								</div>
 								<div class="collapse " id="collapse-4" aria-labelledby="collapse-4" data-bs-parent="#accordion">
 									<div class="card-body">
-										<p class="faq-answer">FAQ COMING SOON</p>
+										<p class="faq-answer">
+											We only require basic information about your insurance policies, such as policy numbers and coverage details, to provide our optimization and management services.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="card mb-2">
+								<div class="card-header " id="heading-5">
+									<h5 class="mb-0 faq-title">
+										<button class="btn btn-link  faq-btn  collapsed " data-bs-toggle="collapse" 
+											data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-4">Do you charge for your services?</button>
+									</h5>
+								</div>
+								<div class="collapse " id="collapse-5" aria-labelledby="collapse-4" data-bs-parent="#accordion">
+									<div class="card-body">
+										<p class="faq-answer">
+											We have a free plan and we also offer subscription-based plans for our AI-assisted insurance management services. You can choose a plan that suits your needs.</p>
 									</div>
 								</div>
 							</div>
@@ -805,19 +716,14 @@
 						</div>
 					</div>
 				</section>
-				<section class="locations-section  mega-section ">
-					<div class="sec-heading centered  ">
-						<div class="content-area">
-							<h2 class=" title  wow fadeInUp" data-wow-delay=".4s">Our Contacts</h2>
-						</div>
-					</div>
-					<div class=" contact-info-panel ">
+				<section class="locations-section  mega-section d-flex justify-content-center">
+					<div class=" contact-info-panel justify-content-center">
 						<div class="info-section ">
 							<div class="row">
-								<div class="col-12 col-lg-4">     
-									<div class="info-panel  wow fadeInUp" data-wow-delay=".4s ">
-										<h4 class="location-title">Let's have a meeting:</h4>
-										<div class="line-on-side "> </div>
+								<div class="col-12 text-center just">     
+									<div class="info-panel wow fadeInUp" data-wow-delay=".4s ">
+										<h4 class="location-title">Talk to our friendly customer services team</h4>
+										<div class="line-on-side"> </div>
 										<div class="location-card  "><i class="flaticon-email icon"></i>
 											<div class="card-content">
 												<h6 class="content-title">email:</h6><a class="email link" href="mailto:yourname@example.com">info@example.com</a>
@@ -843,52 +749,35 @@
 			<div class="container">
 				<div class="row footer-cols">
 					<div class="col-12 col-md-8 col-lg-4  footer-col ">
-						<img class="img-fluid footer-logo" loading="lazy" src="assets/images/logo/logo-dark.png" alt="logo"/>
+						<img class="img-fluid footer-logo" loading="lazy" src="assets/images/logo/white-logo.png" alt="logo"/>
 						<div class="footer-col-content-wrapper">        
 							<p class="footer-text-about-us">
-								Investing in SmartLet means investing in the future of property management – a future where AI
-								 sets new standards and opens unprecedented avenues for growth. Join us in shaping this exciting
-								  evolution and reap the rewards of pioneering excellence.
+								Partnering with Insurance AI means investing in the future of your insurances management – Join us in shaping this exciting evolution and reap the rewards of pioneering excellence in insurance engagement.
 							</p>
 						</div>
-						<div class="form-area ">
-							<div class="mailchimp-form ">
-								<form class="one-field-form" method="post" action="#0">
-									<div class="field-group ">
-										<label class="email-label" for="email-input"> Subscribe to our newsletter</label>
-										<input class="email-input " type="email" value="" name="EMAIL" id="email-input" placeholder="Email Address" autocomplete="off"/>
-										<div class="cta-area">
-											<input class="btn-solid subscribe-btn" type="submit" value="Subscribe" name="subscribe"/>
-										</div>
-									</div><span class="email-notice">*we will not share your personal info</span>
-								</form>
-							</div>
-						</div>
 					</div>
-					<div class="col-6 col-lg-2  footer-col ">
-						<h2 class=" footer-col-title    ">useful links</h2>
+					<div class="col-6 col-lg-2  footer-col mt-5">
 						<div class="footer-col-content-wrapper">
 							<ul class="footer-menu ">
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">Google</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#page-hero">Home</a>
 								</li>
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">Dribbble</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#about">About Us</a>
 								</li>
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">linkedIn</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#services">Services</a>
 								</li>
 							</ul>
 						</div>
 					</div>
-					<div class="col-6 col-lg-2 footer-col ">
-						<h2 class=" footer-col-title    ">Resources</h2>
+					<div class="col-6 col-lg-2 footer-col mt-5">
 						<div class="footer-col-content-wrapper">
 							<ul class="footer-menu">
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">support</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#pricing">Pricing</a>
 								</li>
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">dashboard</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#faq">Faqs</a>
 								</li>
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">drivers</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#why">Why</a>
 								</li>
-								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">projects</a>
+								<li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#page-hero">Start asking</a>
 								</li>
 							</ul>
 						</div>
@@ -922,7 +811,7 @@
 							<p class="credits">
 								&copy; 2023
 								All rights reserved to
-													 <a class="link" href="#0">AI2BC - SmartLet Property Management</a>
+													 <a class="link" href="#0">AI2BC - Insurance AI </a>
 							</p>
 						</div>
 						<div class="col-12 col-md-6 d-flex justify-content-end">
@@ -964,5 +853,8 @@
 				<script src="js/vendors/jquery.fancybox.min.js"></script>
 				<!--     main     -->
 				<script src="js/main.js"></script>
+				<!-- Chatbot -->
+				<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+				<script src="js/askMe.js"></script>
 	</body>
 </html>
