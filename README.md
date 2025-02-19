@@ -163,9 +163,9 @@ or for development:
 
 - **AI Processing**: Python (TensorFlow for policy analysis)
 
-- **Data Sources**: UK & US Insurance Regulatory Databases
+- **Data Sources**: UK & US Insurance Regulatory Databases via AI databases
 
-- **Cloud & APIs**: AWS, Google Cloud, OpenStreetMap (for location-based policy availability)
+- **Cloud & APIs**: AWS,
 
 ***
 
